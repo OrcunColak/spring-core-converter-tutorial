@@ -1,22 +1,18 @@
-package com.colak.springconvertertutorial.service;
+package com.colak.springtutorial.service;
 
-import com.colak.springconvertertutorial.converter.UserDTO;
-import com.colak.springconvertertutorial.converter.UserEntity;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.colak.springtutorial.converter.UserDTO;
+import com.colak.springtutorial.converter.UserEntity;
+import lombok.RequiredArgsConstructor;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class MyConverterService {
 
     private final ConversionService conversionService;
-
-    @Autowired
-    public MyConverterService(final ConversionService conversionService) {
-        this.conversionService = conversionService;
-    }
 
     public UserDTO getUser(UserEntity user) {
         // do the conversion!!

@@ -1,14 +1,16 @@
-package com.colak.springconvertertutorial.converter;
+package com.colak.springtutorial.converter;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
+
+import java.time.LocalDate;
 
 @Getter
 @AllArgsConstructor
-@Builder
-public class UserDTO {
+public class UserEntity {
+    Long id;
     String username;
     String password;
     String fullName;
+    LocalDate lastLogin;
 }

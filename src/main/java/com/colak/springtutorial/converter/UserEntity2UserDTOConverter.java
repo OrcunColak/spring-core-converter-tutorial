@@ -1,4 +1,4 @@
-package com.colak.springconvertertutorial.converter;
+package com.colak.springtutorial.converter;
 
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
